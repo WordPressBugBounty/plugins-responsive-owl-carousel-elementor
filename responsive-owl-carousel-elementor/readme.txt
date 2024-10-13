@@ -16,6 +16,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 A highly customizable, powerful & responsive carousel plugin for Elementor page builder that is based on the Owl Carousel jQuery plugin.
 
 == Description ==
+
+[TRY A LIVE DEMO](https://tastewp.com/new?pre-installed-plugin-slug=elementor%2Cresponsive-owl-carousel-elementor&redirect=plugins.php&ni=true) Powered by TasteWP
+
 This is a Carousel addon plugin,  thanks to <a href="https://owlcarousel2.github.io/OwlCarousel2" target="_blank">Owl Carousel</a>, for Elementor page builder. This plugin offers to create unlimited carousels/sliders using a highly customizable carousel widget inside the edit page of the Elementor page builder.
 
 = Plugin Features =
