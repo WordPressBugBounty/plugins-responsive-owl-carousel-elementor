@@ -8,16 +8,15 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! empty( $settings) && ! $settings[ $field_prefix . 'social_icon_hide' ] ) :
-	?>
-	<div class="owl-social-icon">
-		<?php
-		echo owce_get_social_icons(
-			$this,
-			$item,
-			[ 'class' => $social_icon_hover_animation_class ]
-		);
-		?>
-	</div>
-	<?php
-endif;
+$is_hidden = $settings[ $field_prefix . 'social_icon_hide' ] ?? false;
+
+if ( $is_hidden ) {
+	return;
+}
+
+$_settings = $item ?? array();
+$options = array( 'class' => $social_icon_hover_animation_class ?? '' );
+?>
+<div class="owl-social-icon">
+    <?php echo owce_get_social_icons( $this, $_settings, $options ); ?>
+</div>

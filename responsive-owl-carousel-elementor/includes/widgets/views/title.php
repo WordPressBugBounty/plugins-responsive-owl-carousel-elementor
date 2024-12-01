@@ -7,9 +7,14 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! $settings[ $field_prefix . 'title_hide' ] ) {
-	echo owce_get_text_with_tag( $this, $settings[ $field_prefix . 'title_tag' ], $item['item_title'], [
-		'class'        => 'owl-title',
-		'data-setting' => 'item_title'
-	] );
+$is_hidden = $settings[ $field_prefix . 'title_hide' ] ?? false;
+
+if ( $is_hidden ) {
+	return;
 }
+
+$html_tag = $settings[ $field_prefix . 'title_tag' ] ?? 'h3';
+$text     = $item['item_title'] ?? '';
+$attrs    = array( 'class' => 'owl-title', 'data-setting' => 'item_title' );
+
+echo wp_kses_post( owce_get_text_with_tag( $this, $html_tag, $text, $attrs ) );

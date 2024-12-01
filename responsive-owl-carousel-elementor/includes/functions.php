@@ -542,7 +542,7 @@ function owce_background_control( $widget, $field, $label, $options = [] ) {
 			'exclude'         => $background_exclude,
 			'types'           => $background_type,
 			'selector'        => $selector,
-			'content_classes' => 'myclassss',
+			'content_classes' => '',
 			'condition'       => $condition,
 		]
 	);
@@ -1198,7 +1198,7 @@ function owce_icons_control( $widget, $field, $label, $options = [] ) {
 			'label'   => esc_html__( $label, 'responsive-owl-carousel-elementor' ),
 			'type'    => Controls_Manager::ICONS,
 			'default' => $default,
-			'classes' => $classes
+			'classes' => $classes,
 		]
 	);
 }

@@ -7,9 +7,14 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! $settings[ $field_prefix . 'quote_icon_hide' ] ) { ?>
-	<div class="owl-quote-icon">
-		<?php echo owce_get_rendered_icons( $settings[ $field_prefix . 'quote_icon' ] ); ?>
-	</div>
-	<?php
+$is_hidden = $settings[ $field_prefix . 'quote_icon_hide' ] ?? true;
+
+if ( $is_hidden ) {
+	return;
 }
+
+$icon = $settings[ $field_prefix . 'quote_icon' ] ?? array( 'library' => 'solid', 'value' => 'fa fa-quote-left' );
+?>
+<div class="owl-quote-icon">
+    <?php echo owce_get_rendered_icons( $icon ); ?>
+</div>
