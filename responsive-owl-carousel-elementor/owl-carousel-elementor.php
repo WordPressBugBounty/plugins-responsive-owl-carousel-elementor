@@ -15,11 +15,11 @@
  * Domain Path: /languages
  *
  * Requires at least: 6.3
- * Tested up to: 6.7.1
+ * Tested up to: 6.9
  * Requires PHP version: 7.4
  *
- * Elementor tested up to: 3.25.10
- * Elementor Pro tested up to: 3.25.4
+ * Elementor tested up to: 3.34.0
+ * Elementor Pro tested up to: 3.34.0
  *
  * Requires Plugins: elementor
  */
